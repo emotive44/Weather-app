@@ -1,0 +1,27 @@
+@import '../../../shared/styles/global';
+
+
+.hourly {
+  display: flex;
+  margin-top: 2rem;
+  position: relative;
+
+  .container {
+    flex: 1;
+    display: flex;
+    overflow-x: scroll;
+    @include custom-scroll($horizontal: 8);
+  }
+
+  .pagination {
+    bottom: 1rem;
+    left: 13.5rem;
+    position: absolute;
+  }
+
+  .add-metrics {
+    bottom: 1rem;
+    right: 0.5rem;
+    position: absolute;
+  }
+}

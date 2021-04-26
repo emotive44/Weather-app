@@ -1,0 +1,20 @@
+@import '../../styles/global';
+
+
+.navbar {
+  display: flex;
+  padding: 0 0.5em;
+  background-color: get-color(gray, lighter);
+  justify-content: space-between;
+
+  nav {
+    width: 60%;
+    @include vertically-centred;
+
+    ul {
+      width: 100%;
+
+      li:first-child { width: 25%; }
+    }
+  }
+}

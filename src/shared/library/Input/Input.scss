@@ -1,0 +1,29 @@
+@import '../../styles/global';
+
+
+.input {
+  width: 42%;
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+
+  &-wrapper {
+    position: relative;
+
+    input { width: 100%; padding: 0.2rem; }
+
+    small {
+      top: 0.3rem;
+      right: -6.5rem;
+      color: get-color(green);
+      position: absolute;
+      vertical-align: middle;
+    }
+  }
+
+  &-err {
+    height: 2rem;
+    color: get-color(red);
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,41 @@
+.current-item {
+  z-index: 21;
+  display: flex;
+  padding: 0 0.5rem;
+  margin-top: -3rem;
+  flex-direction: column;
+  height: calc(100% + 2rem);
+
+  header {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .temp { 
+      display: flex;
+      color: orange; 
+
+      span { font-size: 5rem; }
+      small { font-size: 3rem; }
+    }
+  }
+
+  main { 
+    flex: 2;
+    margin-top: -2rem;
+    text-align-last: center;
+
+    .status {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  footer {
+    display: flex;
+    text-align-last: center;
+    justify-content: space-between;
+  }
+}

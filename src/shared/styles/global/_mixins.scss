@@ -1,0 +1,40 @@
+@mixin custom-scroll($vertical: null, $horizontal: null) {
+  &::-webkit-scrollbar {
+    @if($vertical) {
+      width: #{$vertical}px;
+    }
+    @else {
+      height: #{$horizontal}px;
+    }
+  }
+
+  &::-webkit-scrollbar-track { 
+    border-radius: 10px; 
+    box-shadow: inset 0 0 5px gray;
+  }
+
+  &::-webkit-scrollbar-thumb { 
+    background: gray;
+    border-radius: 10px; 
+  }
+}
+
+@mixin vertically-centred {
+  display: flex;
+  align-items: center;
+}
+
+@mixin fade($type, $duration: 0.5, $opacity: 1) {
+  @if ($type == 'hide') {
+    opacity: 0;
+    visibility: hidden;
+    transition: ease-in-out #{$duration}s;
+    transition-property: visibility opacity;
+  }
+  @else if ($type == 'show') {
+    opacity: $opacity;
+    visibility: visible;
+    transition: ease-in #{$duration}s;
+    transition-property: visibility opacity;
+  }
+}

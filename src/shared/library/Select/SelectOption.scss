@@ -1,0 +1,31 @@
+@import '../../styles/global';
+
+
+.option {
+  padding: 0.5rem; 
+  cursor: pointer;
+  @include vertically-centred;
+  transform: translateX(-80%); 
+  border-bottom: 1px solid get-color(black);
+  transition: 0.3s ease background-color, 0.7s ease-out transform;
+
+  &.animate { transform: translateX(0); }
+
+  &.option-checked { background-color: get-color(gray, lighter); }
+
+  &:last-child { padding-bottom: 7px; border-bottom: none; }
+
+  &-content { 
+    flex: 1; 
+    @include vertically-centred;
+
+    i { margin-right: 1rem; }
+  }
+
+  .checked-arrow { 
+    margin: 0 1rem; 
+    text-align: right; 
+    
+    i { font-size: small; }
+  }
+}

@@ -1,0 +1,36 @@
+$colors: (
+  blue: (
+    light: rgb(210, 242, 255),
+    base: skyblue,
+    darker: rgb(51, 51, 139),
+  ),
+  red: (
+    base: red,
+  ),
+  black: (
+    light: rgb(51, 50, 50),
+    base: black,
+  ),
+  green: (
+    base: green,
+  ),
+  yellow: (
+    lighter: lighten(orange, 25%),
+    light: lighten(orange, 20%),
+    base: lighten(orange, 15%),
+    dark: lighten(orange, 5%),
+    darker: orange,
+  ),
+  white: (
+    base: white,
+    dark: whitesmoke,
+    darker: darken(whitesmoke, 10%),
+  ),
+  gray: (
+    lighter: lightgray,
+    light: darken(lightgray, 5%),
+    base: darken(lightgray, 10%),
+    dark: darken(lightgray, 20%),
+    darker: gray,
+  ),
+);

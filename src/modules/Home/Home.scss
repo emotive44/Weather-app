@@ -1,0 +1,31 @@
+@import '../../shared/styles/global';
+
+
+.home {
+  height: 100%;
+  padding-top: 2rem;
+  background-color: get-color(blue, light);
+
+  .weather-error {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    color: get-color(red);
+  }
+
+  .current-city { width: 15%; margin: 0 0 4rem 22rem; }
+
+  .weather {
+    width: 70%;
+    margin: 0 auto;
+    min-height: 45vh;
+    max-height: 80vh;
+    background-color: get-color(white);
+  }
+
+  .info {
+    width: 70%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+}

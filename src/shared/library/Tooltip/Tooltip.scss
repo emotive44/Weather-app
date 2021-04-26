@@ -1,0 +1,34 @@
+@import '../../styles/global';
+
+
+.tooltip { 
+  width: 100%; 
+
+  .children {
+    width: 100%;
+    display: flex; 
+    position: relative; 
+    align-items: center; 
+    flex-direction: column; 
+  }
+
+  .content { 
+    z-index: 31; 
+    padding: 10px; 
+    font-weight: 300; 
+    font-size: 1.4rem; 
+    position: absolute; 
+    border-radius: 3px; 
+    @include fade('hide', 0.4); 
+    background: get-color(black); 
+    box-shadow: 0 0 15px 0 get-color(gray, darker); 
+  }
+
+  &.bottom {
+    .content { width: 90%; top: 3.5rem; }
+  }
+
+  &.bottom:hover {
+    .content { @include fade('show', 0.4); }
+  }
+}

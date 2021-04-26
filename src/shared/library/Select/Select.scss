@@ -1,0 +1,41 @@
+@import '../../styles/global';
+
+
+.select {
+  display: flex;
+  margin-left: 1rem;
+  border-radius: 4px; 
+  position: relative; 
+  border: 1px solid get-color(black);
+  justify-content: space-between;
+
+  .value { padding: 0.2em; }
+
+  .icon {
+    cursor: pointer;
+    margin-right: 0.5em;
+    @include vertically-centred;
+
+    &.arrow {
+      position: relative; 
+      transition: 0.4s ease-in-out transform;
+
+      &.open { transform: rotate(180deg); }
+    }
+  }
+
+  .options {
+    width: 100%; 
+    z-index: 20; 
+    max-height: 0; 
+    padding: 0.2em;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 4px;
+    @include fade('hide');
+    background-color: get-color(white);
+    border: 1px solid get-color(black);
+
+    &.open { @include fade('show'); }
+  }
+}

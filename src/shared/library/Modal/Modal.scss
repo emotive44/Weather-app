@@ -1,0 +1,51 @@
+@import '../../styles/global';
+
+
+.modal {
+  top: 18%;
+  left: 50%;
+  width: 50%;
+  z-index: 30;
+  display: flex; 
+  position: fixed;
+  min-height: 15rem; 
+  border-radius: 6px;
+  flex-direction: column; 
+  border: 1px solid black;
+  @include fade('hide', 0.5); 
+  transform: translateX(-50%);
+  background-color: get-color(gray, lighter);
+
+  &.show { @include fade('show', 0.5) }
+  &.closed { @include fade('hide', 0.5); }
+
+  .header {
+    font-size: 18px; 
+    text-align: center; 
+    padding: 1rem 0.5rem;
+    @include vertically-centred; 
+    justify-content: space-between; 
+    border-bottom: 1px solid get-color(gray, darker);
+
+    &-wrapper { flex: 1 1 90%; }
+
+    i { 
+      font-size: 30px; 
+      cursor: pointer;
+      margin-left: 0.5rem; 
+    }
+  }
+
+  .main { 
+    flex: 1 0 50%; 
+    min-height: 10rem; 
+    max-height: 35rem; 
+    padding: 1rem 2rem; 
+    margin-right: 0.2rem; 
+  }
+
+  .footer { 
+    padding: 1rem 0.5rem; 
+    border-top: 1px solid get-color(gray, darker);
+  }
+}

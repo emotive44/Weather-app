@@ -1,0 +1,57 @@
+@import '../../../shared/styles/global';
+
+
+.hourly-item {
+  height: 93%;
+  width: 10rem;
+  text-align: center;
+  flex-direction: column;
+  @include vertically-centred;
+  border-right: 1.5px dotted get-color(gray, lighter);
+
+  &.aside {
+    height: 92%;
+    width: 100%;
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 1.5px dotted get-color(gray, lighter) !important;
+  }
+
+  &:last-child { border-right: none; }
+
+  .section-1,
+  .section-2,
+  .section-3 {
+    display: flex;
+    min-width: 12rem;
+    flex-direction: column;
+  }
+
+  .section-1 {
+    min-height: 19rem;
+
+    small { color: get-color(gray, darker) }
+  
+    span { color: get-color(yellow, darker); }
+  }
+
+  .section-2 {
+    min-height: 8rem;
+
+    i {
+      color: get-color(gray, lighter);
+      font-size: x-large;
+      margin-bottom: 0.5rem;
+    }
+  
+    small { color: get-color(blue); }
+  }
+
+  .section-3 {
+    min-height: 12rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+
+    span { margin-bottom: 1rem; }
+  }
+}
